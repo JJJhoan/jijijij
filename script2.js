@@ -4,7 +4,6 @@ const progressBar = document.getElementById('progress-bar');
 const lyricsDisplay = document.getElementById('lyrics-display');
 const audio = document.getElementById('audio');
 const playButton = document.getElementById('play-button');
-const backButton = document.getElementById('back-button');
 
 // Selecciona el botón con la clase 'next-button'
 const nextButton = document.querySelector('#play-button');
@@ -78,10 +77,6 @@ audio.addEventListener('timeupdate', () => {
     }
 });
 
-// Función para retroceder
-backButton.addEventListener('click', () => {
-    window.history.back(); // Redirige a la página anterior
-});
 
 // Función para reproducir la música
 playButton.addEventListener('click', () => {
