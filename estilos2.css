@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    position: relative;
+    cursor: url('assets/cursor.cur'), auto;
+}
+
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/fondo.jfif');
+    background-size: contain;  /* Esto asegura que toda la imagen sea visible */
+    background-position: center;
+    opacity: 0; /* Empieza invisible */
+    z-index: -1; /* El fondo está detrás de todo */
+    transition: opacity 1s ease;
+}
+
+#dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: none;
+}
+
+#play-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2; /* Asegura que el botón de reproducir esté encima del fondo */
+}
+
+.play-button {
+    cursor: pointer;
+    padding: 20px 40px;
+    background-color: #34724e;
+    color: white;
+    border: 4px solid #2a4434;
+    border-radius: 9px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.play-button:hover {
+    background-color: #468b63;
+    transition: background-color 0.6s;
+    cursor: url('assets/cursor (1).cur'), pointer;
+}
+
+.progress-container {
+    width: 80%;
+    max-width: 800px;
+    height: 7px;
+    background-color: #749c90;
+    margin: 10px auto;
+    border-radius: 9px;
+    cursor: url('assets/cursor (1).cur'), pointer;
+    z-index: 3; /* Asegura que la barra de progreso esté encima del fondo */
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #225044;
+    border-radius: 5px;
+}
+
+.lyrics-container {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    max-height: 80vh;
+    overflow: hidden;
+    margin-top: 20px;
+    z-index: 3; /* Asegura que las letras estén encima del fondo */
+}
+
+.lyrics p {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.lyrics p.active {
+    background-color: #3c6d5a;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2; /* Asegura que el botón de retroceder esté por encima del fondo */
+}
+
+#back-button {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 10px;
+    background-color: #34724e;
+    color: white;
+    border: 4px solid #2a4434;
+    border-radius: 9px;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+#back-button:hover {
+    background-color: #468b63;
+    cursor: url('assets/cursor (1).cur'), pointer;
+}
+
+.play-button {
+    cursor: pointer;
+    padding: 20px 40px;
+    background-color: #34724e;
+    color: white;
+    border: 4px solid #2a4434;
+    border-radius: 9px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.6s;  /* Efecto suave en el color de fondo */
+}
+
+.play-button:hover {
+    background-color: #468b63; /* Cambio de color al pasar el mouse */
+    transition: background-color 0.6s;
+}

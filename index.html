@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Para mi Fersita ♡</title>
+    <link rel="icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="dark-overlay"></div>
+    <audio id="audio">
+        <source src="assets/yung kai - blue (Lyrics).mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Contenedor para la imagen de fondo -->
+    <div id="background-image" class="background-image"></div>
+
+    <!-- Botón de Reproducir -->
+    <div id="play-container" class="play-container">
+        <button id="play-button" class ="play-button">Tocame.</button> <!-- Este es el botón al que se le cambia el texto -->
+
+    </div>
+
+    <!-- Controles de audio que estarán ocultos hasta que se presione el botón de reproducir -->
+    <div class="progress-container" style="display: none;">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    
+    <div class="lyrics-container" style="display: none;">
+        <div id="lyrics-display" class="lyrics"></div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
